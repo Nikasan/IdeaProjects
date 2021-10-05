@@ -5,11 +5,13 @@ import com.mashape.unirest.http.JsonNode;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
 import helpers.SetupObjectMapper;
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.lang.reflect.Type;
+import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -50,8 +52,13 @@ public class SimpleTestGson {
 
     @Test
     public void assertWithoutMappers() throws UnirestException {
-        HttpResponse<JsonNode> response = Unirest.get(URL).asJson();
-        assertThat(response.getBody().getObject().getJSONArray("articles").getJSONObject(0).get("title").toString()).startsWith("Nuevos");
-        assertThat(response).isNotNull();
+        JsonNode body = Unirest.get(URL).asJson().getBody();
+        JSONObject object = body.getObject();
+        JSONArray articlesArr = object.getJSONArray("articles");
+        Type listType = new TypeToken<List<Article>>() {
+        }.getType();
+        List<Article> articles = new Gson().fromJson(articlesArr.toString() , listType);
+        assertThat(articles)
+                .hasSize(82);
     }
 }
