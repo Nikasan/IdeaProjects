@@ -2,13 +2,13 @@ package Generics;
 
 public class RunTest {
     public static void main(String[] args) {
-        Test test1 = new Test("I was born in ", 1990);
+        GenericClass test1 = new GenericClass("I was born in ", 1990);
         test1.runTest();
         Boolean b = true;
-        Test test2 = new Test("Sad but ",b);
+        GenericClass test2 = new GenericClass("Sad but ",b);
         test2.runTest();
 
-        TestMethod method1 = new TestMethod();
+        GenericMethod method1 = new GenericMethod();
         method1.testMethod("I am generic");
         method1.testMethod(0.589);
         method1.testMethod(25);
