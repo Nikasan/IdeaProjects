@@ -1,4 +1,6 @@
-import Pages.MainPage;
+package TestNG.Pages;
+
+import TestNG.Pages.MainPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
