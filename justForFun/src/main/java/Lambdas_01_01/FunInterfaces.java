@@ -41,11 +41,11 @@ public class FunInterfaces {
 
         consumerStr1.andThen(consumerStr2).accept("AAAbbb");
 
-        Consumer<String> consumer1 = (arg) -> {
+        Consumer<String> consumer1 = arg -> {
             System.out.println(arg + "OK");
         };
 
-        Consumer<String> consumer2 = (x) -> {
+        Consumer<String> consumer2 = x -> {
             System.out.println(x + "OK!!!");
         };
         consumer1.andThen(consumer2).accept("TestConsumerAfterThen - ");

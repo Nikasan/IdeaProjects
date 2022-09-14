@@ -7,6 +7,7 @@ public class CollectionsExamples {
 
     public static void main(String[] args) {
         ArrayList<String> arrayList = new ArrayList<String>(Arrays.asList("1", "2", "3", "4", "5"));
+
         arrayList.stream().peek(s -> s.toLowerCase());
         CollectionsExamples c = new CollectionsExamples();
         c.iteration1(arrayList);
