@@ -11,7 +11,9 @@
     <modules>
         <module>UnirestAPITesting</module>
         <module>ApachePOItesting</module>
-        <module>SeleniumSpring</module>
+        <module>javaBasic</module>
+        <module>JavaOOP</module>
+        <module>TestingFrameworks</module>
     </modules>
     <properties>
     <selenium-java>4.0.0</selenium-java>
