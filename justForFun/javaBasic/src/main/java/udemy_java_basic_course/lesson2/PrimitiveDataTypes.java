@@ -1,10 +1,12 @@
+package udemy_java_basic_course.lesson2;
+
 /**
  * Created by Nikasan
  */
-public class JavaTypes {
+public class PrimitiveDataTypes {
 
-//    Data types are divided into two groups:
-//    Primitive data types - includes byte, short, int, long, float, double, boolean and char
+//   Primitive Data types are divided into 3 groups: numeric, character, boolean
+//   Primitive data types contains 8 types - includes byte, short, int, long, float, double, boolean and char
     byte b1 = -128;
     byte b2 = 127;  //1 byte
 
@@ -20,15 +22,13 @@ public class JavaTypes {
     float f1 = 1.09876565656f; // 4 bytes
     double d1 = 1.8793874593874598; // 8 bytes
 
-    boolean b; // 1 bit
+    boolean b; // 1 bit, false by default
     char ch = '.'; //2 bytes
 
     public static void main(String[] args) {
-        JavaTypes javaTypes = new JavaTypes();
-        System.out.println(javaTypes.ch);
+        PrimitiveDataTypes javaTypes = new PrimitiveDataTypes();
+        System.out.println(javaTypes.b);
     }
-
-//    Non-primitive data types - such as String, Arrays and Classes
 
 
 }

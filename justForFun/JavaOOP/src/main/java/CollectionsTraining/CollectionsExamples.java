@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.Stack;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class CollectionsExamples {
@@ -20,6 +21,8 @@ public class CollectionsExamples {
 //    //Vector is synchronized.
 //    //Java Vector contains many legacy methods that are not the part of a collections framework.
 //    Vector<String> vector = new Vector<>();
+
+    Predicate<String> predicate = str -> str.startsWith("o") && str.startsWith("O");
 
     //last-in-first-out data structure
     public <T> Stack<T> fillStack(T... t) {

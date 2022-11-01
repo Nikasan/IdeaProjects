@@ -20,7 +20,7 @@ import org.junit.jupiter.api.TestMethodOrder;
 @TestInstance(Lifecycle.PER_CLASS)
 class TestClassOrderTest {
 
-    @BeforeAll
+
     void beforeAll(){
         System.out.println("Before all from TestClassOrderTest");
     }

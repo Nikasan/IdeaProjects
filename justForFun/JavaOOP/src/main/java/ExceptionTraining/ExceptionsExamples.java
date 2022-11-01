@@ -11,7 +11,7 @@ public class ExceptionsExamples {
         ExceptionsExamples examples = new ExceptionsExamples();
 
         try {
-            examples.badMethod();
+//            examples.badMethod(); -> throw error
             System.out.println("try block");
         } catch (Exception e) {
             System.out.println("exeption");
@@ -54,7 +54,7 @@ public class ExceptionsExamples {
 
         try {
             int[] a = new int[5];
-//            a[5] = 30 / 0;
+            a[5] = 30 / 0;
 //            a[6] = 8;
             throw new Exception();
         } catch (ArithmeticException e) {

@@ -1,0 +1,47 @@
+The INNER JOIN keyword selects records that have matching values in both tables.
+#2 tables
+SELECT column_name(s)
+FROM table1
+INNER JOIN table2
+ON table1.column_name = table2.column_name;
+
+#3tables
+SELECT column_name(s)
+FROM ((table1
+INNER JOIN table2 ON table1.column_name = table2.column_name)
+INNER JOIN table3 ON table1.column_name = table3.column_name);
+
+Note: The LEFT JOIN keyword returns all records from the left table (Customers),
+even if there are no matches in the right table (Orders).
+
+Note: The RIGHT JOIN keyword returns all records from the right table (Employees),
+even if there are no matches in the left table (Orders).
+
+FULL OUTER JOIN all matching records from both tables whether the other table matches or not.
+Вернет все запрошенные колонки, даже если в одной из таблиц нет соответствующей записи. Для нее будет null в колонке
+#table1 Customers               #table2 Orders
+|CustomerID|name |              |OrderId|CustomerID |
+|2         |Dima |              |654    |1          |
+|3         |Lily |              |234    |3          |
+|5         |Veron|              |123    |7          |
+
+SELECT Customers.CustomerName, Orders.OrderID
+FROM Customers
+FULL OUTER JOIN Orders ON Customers.CustomerID=Orders.CustomerID
+ORDER BY Customers.CustomerName;
+|CustomerName|OrderID|
+|null |654 |
+|null |123 |
+|Dima |null|
+|Lily |234 |
+|Veron|null|
+
+#Diferent, unique records
+SELECT DISTINCT column1, column2, ...
+FROM table_name;
+
+Альясы = AS
+SELECT CustomerID AS ID, CustomerName AS Customer
+FROM Customers;
+
+
