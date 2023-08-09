@@ -18,6 +18,7 @@ public class Runner {
         Object dog2 = new Dog();
         System.out.println("Dog1 hashCode(): " + dog1.hashCode());
         System.out.println("Dog2 hashCode(): " + dog2.hashCode());
+
         System.out.println("Equals(): " + dog1.equals(dog2));
         System.out.println("Operator == : " + dog1 == dog2);
 
@@ -32,9 +33,9 @@ public class Runner {
         cats.add(yarik1);
         cats.add(yarik2);
         boolean equals = yarik1.equals(yarik2);
-        System.out.println(cats );
+        System.out.println("In to HashSet was added 2 objects, but it contains only one - " + cats );
 
-        System.out.println(equals);
+        System.out.println("Cat1 & Cat2 are equals? - " + equals);
 
     }
 }

@@ -89,4 +89,10 @@ public class ExceptionsExamples {
     public void badMethod(){
         throw new Error();
     }
+
+    //StackOverflowError:
+    //    public static void main(String[] args) {
+//        System.out.println("?");
+//     Disco.main(new String[]{"g"});
+//    }
 }

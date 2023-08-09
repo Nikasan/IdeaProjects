@@ -1,0 +1,29 @@
+package leetCode;
+
+import java.util.HashMap;
+
+public class TwoSum {
+
+    public static int[] nums1 = {3, 3};
+    public static int[] nums4 = {-1, -2, -3, -4};
+
+    public static int[] twoSum(int[] nums, int target) {
+        HashMap<Integer, Integer> map = new HashMap();
+        for (int i = 0; i < nums.length; i++) {
+            int diff = target - nums[i];
+
+            if (map.containsKey(diff)) {
+                return new int[]{map.get(diff), i};
+            }
+            map.put(nums[i], i);
+        }
+        return new int[]{};
+    }
+
+    public static void main(String[] args) {
+        int[] ints = twoSum(nums4, -6);
+        for (int s : ints) {
+            System.out.println("value= " + s);
+        }
+    }
+}

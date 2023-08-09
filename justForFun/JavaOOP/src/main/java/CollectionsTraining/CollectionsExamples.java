@@ -1,27 +1,19 @@
 package CollectionsTraining;
 
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.Stack;
+import java.util.*;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class CollectionsExamples {
     // Interface List - ordered collection of objects. It can have duplicate values
 
-//    ArrayList<String> arrayList = new ArrayList<>(Arrays.asList("1", "2", "3", "4", "5"));
+    ArrayList<String> arrayList = new ArrayList<>(Arrays.asList("1", "2", "3", "4", "5",null));
 //    LinkedList<String> linkedList = new LinkedList<>(Arrays.asList("66", "1", "2", "3", "4", "5"));
 //    //Vector is synchronized.
 //    //Java Vector contains many legacy methods that are not the part of a collections framework.
 //    Vector<String> vector = new Vector<>();
 
+    String[] arr = {"f", null, "h"};
     Predicate<String> predicate = str -> str.startsWith("o") && str.startsWith("O");
 
     //last-in-first-out data structure

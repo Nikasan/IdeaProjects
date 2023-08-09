@@ -9,6 +9,7 @@ class YandexMusic implements MusicApi {
 
     @Override
     public void getTracks() {
+        System.out.println("Yandex plays");
     }
 }
 
@@ -16,6 +17,7 @@ class SpotyFy implements MusicApi {
 
     @Override
     public void getTracks() {
+        System.out.println("Spotify plays");
     }
 }
 

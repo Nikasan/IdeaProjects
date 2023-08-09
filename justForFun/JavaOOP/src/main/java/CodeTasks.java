@@ -27,6 +27,17 @@ public class CodeTasks {
         return (reverse.toString()).equals(clean);
     }
 
+    public boolean isPolindrom(int num) {
+        int r, temp, revercedNum = 0;
+        temp = num;
+        while (num > 0) {
+            r = num % 10;
+            num = revercedNum * 10 + r;
+            num = num / 10;
+        }
+        return temp == revercedNum;
+    }
+
     public static void bubbleSort(int[] arr) {
         for (int i = arr.length; i > 0; i--) {
             for (int j = 0; j < i; j++) {
