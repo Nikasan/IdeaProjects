@@ -3,6 +3,9 @@ package interview;
 import java.util.stream.IntStream;
 
 public class Polindroms {
+    public static void main(String[] args) {
+        System.out.println(isPolindrom(121));
+    }
 
     public boolean isPolindrom(String str) {
         StringBuilder builder = new StringBuilder();
@@ -17,14 +20,21 @@ public class Polindroms {
         return IntStream.range(0, temp.length() / 2).noneMatch(i -> temp.charAt(i) != temp.charAt(temp.length() - i - 1));
     }
 
-    public boolean isPolindrom(int num) {
+    public static boolean isPolindrom(int num) {
+        if(num<0) return false;
+
         int r, temp, revercedNum = 0;
         temp = num;
         while (num > 0) {
             r = num % 10;
-            num = revercedNum * 10 + r;
+            System.out.println(r);
+            revercedNum = revercedNum * 10 + r;
+            System.out.println(num);
             num = num / 10;
+            System.out.println(num);
         }
+        System.out.println(temp);
+        System.out.println(revercedNum);
         return temp == revercedNum;
     }
 
