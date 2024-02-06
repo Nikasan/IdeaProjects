@@ -9,14 +9,21 @@ public class StaticAndConstructorsTest {
         System.out.println(Dog.five);
         Dog d = new Dog();
         System.out.println(d.nonStatic);
+
+        d.nonStatic = "Changed nonStatic";
+        Dog.five = "Changed static";
+        System.out.println(d.nonStatic);
+
+        System.out.println(Dog.five);
+
     }
 
 
 
 }
  class Dog{
-    static String five = "static5";
-     String nonStatic = "nonStatic5";
+   public static String five = "static5";
+    public String nonStatic = "nonStatic5";
 
     Dog(){
         System.out.println("constructor");

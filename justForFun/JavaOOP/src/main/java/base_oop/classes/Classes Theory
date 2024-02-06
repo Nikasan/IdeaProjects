@@ -1,0 +1,25 @@
+Abstract class:
+- can't be instantiated, you can't create object of abstract class: (NOT OK! AbstractClassA aA = new AbstractClassA();)
+- It can have a constructor, static or final method!
+- can be inherited, you can extend from one abstract class to another (public abstract class AbstractClassB extends AbstractClassA)
+
+
+Final class:
+-can be instantiated: FinalClassA fa = new FinalClassA(); OK
+-can't be inherited, you can't extend from final class: (public final class FinalClassB extends FinalClassA) NOT OK
+
+final abstract class - NOT OK.
+or final, or abstract
+
+
+
+Interface:
+
+- can be inherited by another interface: (public interface InterfaceB extends InterfaceA is OK)
+Interface can be inherited only by Interface!
+- variables by default: (public static final) int a=5;
+- regular methods by default are abstract;
+- default methods are implicitly public and available in child classes;
+
+Default methods allow us to add new methods to an interface that are automatically available in the implementations.
+Therefore, we don’t need to modify the implementing classes

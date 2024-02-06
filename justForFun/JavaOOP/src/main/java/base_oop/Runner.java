@@ -6,6 +6,9 @@ package base_oop;
 public class Runner {
 
     public static void main(String[] args) throws CloneNotSupportedException {
+
+//        AbstractClassA a = new AbstractClassA(); can't be instantiated
+
         Student student = new Student();
         student.setAge(22);
         Student clone = (Student) student.clone();

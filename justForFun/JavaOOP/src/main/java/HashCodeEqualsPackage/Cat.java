@@ -30,7 +30,7 @@ public class Cat {
     }
 
     @Override
-    public int hashCode() {
+    public final int hashCode() {
         int result = 17;
         result = 31 * result + age;
         result = 31 * result + (name != null ? name.hashCode() : 0);

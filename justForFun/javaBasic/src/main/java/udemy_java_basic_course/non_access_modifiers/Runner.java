@@ -9,5 +9,8 @@ public class Runner {
         FinalClass fc = new FinalClass();
         fc.a = 6;
         System.out.println(fc.a);
+
+        FinalTraining ft = new FinalTraining();
+        ft.finalMethod(ft.fn);
     }
 }

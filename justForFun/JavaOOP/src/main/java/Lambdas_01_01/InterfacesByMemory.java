@@ -19,8 +19,14 @@ public class InterfacesByMemory {
 
         public static void fromFunction() {
             Function<String, Integer> fun = String::length;
-            Integer i = fun.apply("EPAM");
-            System.out.println(i);
+            String i = "EPAM";
+            System.out.println(fun.apply(i));
+
+            fun = fun.andThen(a-> a + 3); // make this action with result after apply
+            System.out.println(fun.apply(i));
+
+            fun = fun.compose(a -> a+ "!!"); //make action with input parameter
+            System.out.println(fun.apply(i));
         }
 
         public static void fromPredicate() {

@@ -126,7 +126,5 @@ public class CodeTasks {
 
     //find distinct pairs from an array arraylist. java
     //find repeating digits between a range of integers.
-    //reverse a string without using reverse/split functions
-    //
-    //2. median of a sorted array
+
 }
