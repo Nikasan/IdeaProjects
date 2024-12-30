@@ -13,16 +13,14 @@ public class StaticAndConstructorsTest {
         d.nonStatic = "Changed nonStatic";
         Dog.five = "Changed static";
         System.out.println(d.nonStatic);
-
         System.out.println(Dog.five);
 
     }
 
-
-
 }
  class Dog{
-   public static String five = "static5";
+   public static String five = "publicStatic5";
+   protected static String six = "privateStatic6";
     public String nonStatic = "nonStatic5";
 
     Dog(){

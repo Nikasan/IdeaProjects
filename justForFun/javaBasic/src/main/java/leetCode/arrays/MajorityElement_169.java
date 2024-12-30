@@ -5,6 +5,8 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 
+//The majority element is the element that appears more than ⌊n / 2⌋ times.
+// You may assume that the majority element always exists in the array.
 public class MajorityElement_169 {
     public static void main(String[] args) {
         int[] nums = {1, 2};

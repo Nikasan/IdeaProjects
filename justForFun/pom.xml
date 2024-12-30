@@ -14,10 +14,11 @@
         <module>javaBasic</module>
         <module>JavaOOP</module>
         <module>TestingFrameworks</module>
+        <module>Cucumber</module>
     </modules>
     <properties>
-    <selenium-java>4.0.0</selenium-java>
-    <webdrivermanager>5.0.3</webdrivermanager>
+    <selenium-java>4.17.0</selenium-java>
+    <webdrivermanager>5.9.2</webdrivermanager>
     </properties>
 
     <dependencies>

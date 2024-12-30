@@ -1,0 +1,11 @@
+Primitive data types: ==
+
+Non-primitive, objects:
+
+== compares references, it checks if the object is equal to itself;
+equals() performs the '==' operation under the hood, that's why this method must be overridden for class
+
+
+hashCode() - 32-bit value of the int type;
+If two objects are equal (i.e. the equals() method returns true), they must have the same hashcode.
+If the hashCode() method is called multiple times on the same object, it must return the same result every time.

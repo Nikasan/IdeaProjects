@@ -2,8 +2,8 @@ package HashCodeEqualsPackage;
 
 public class Cat {
 
-    private final String name;
-    private final int age;
+    private String name;
+    private Integer age;
 
     public Cat(String name, int age) {
         this.name = name;
@@ -31,7 +31,7 @@ public class Cat {
 
     @Override
     public final int hashCode() {
-        int result = 17;
+        int result = age.hashCode();
         result = 31 * result + age;
         result = 31 * result + (name != null ? name.hashCode() : 0);
         return result;

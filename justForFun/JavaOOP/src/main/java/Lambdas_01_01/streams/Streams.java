@@ -5,6 +5,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 import java.util.OptionalInt;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -30,11 +31,15 @@ import java.util.stream.Stream;
 public class Streams {
 
     public static void main(String[] args) {
+
+        List<Integer> integerList = List.of(2,4,6,8);
+        System.out.println(divideCountListElements(integerList,2));
+    divideListElements(integerList,2);
         /*
         Reduce has 3 blocks
         Identity - start value and end value if stream empty
         Accumulator - function that takes 2 param, partial result and next stream element
-        Combiner - функция для объединения резульатов если парарельный стрим, или функция решающая разницу между типами в аккумуляторе
+        Combiner - функция для объединения результатов если парарельный стрим, или функция решающая разницу между типами в аккумуляторе
         Optional<T> reduce(BinaryOperator<T> accumulator)
         T reduce(T identity, BinaryOperator<T> accumulator)
         U reduce(U identity, BiFunction<U,? super T,U> accumulator, BinaryOperator<U> combiner)
@@ -69,7 +74,7 @@ public class Streams {
 //        System.out.println(divideListElements(numbers,0));
     }
 
-    public static int divideListElements(List<Integer> values, int divider) {
+    public static int divideCountListElements(List<Integer> values, int divider) {
         return values.stream().reduce(0, (a, b) -> {
             try {
                 return a / divider + b / divider;
@@ -78,6 +83,25 @@ public class Streams {
             }
             return 0;
         });
+    }
+    public static void divideListElements(List<Integer> values, Integer divider) {
+
+//        try{
+//            values.stream().map(a -> a/divider).forEach(System.out::println);
+//        }catch (ArithmeticException e){
+//            e.printStackTrace();
+//        }finally {
+//            System.out.println("Couldn't devide by : " + divider);
+//        }
+
+        values.stream().map(a -> {
+            try {
+                return a / divider;
+            } catch (ArithmeticException e) {
+                e.printStackTrace();
+            }
+                return 0;
+        }).forEach(System.out::println);
     }
 }
 

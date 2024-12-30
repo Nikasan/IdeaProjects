@@ -14,6 +14,7 @@ import java.util.Set;
 public class Runner {
 
     public static void main(String[] args) {
+
         Object dog1 = new Dog();
         Object dog2 = new Dog();
         System.out.println("Dog1 hashCode(): " + dog1.hashCode());

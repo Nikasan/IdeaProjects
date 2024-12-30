@@ -6,8 +6,9 @@ Abstract class:
 
 Final class:
 -can be instantiated: FinalClassA fa = new FinalClassA(); OK
--can't be inherited, you can't extend from final class: (public final class FinalClassB extends FinalClassA) NOT OK
-
+-can't be inherited, you can't extend from final class: (public final class FinalClassB extends FinalClassA) NOT OK - prevent inheritance
+Final variable - create constants
+Final method - prevent method Overriding
 final abstract class - NOT OK.
 or final, or abstract
 

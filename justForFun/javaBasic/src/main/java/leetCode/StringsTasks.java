@@ -7,12 +7,12 @@ public class StringsTasks {
 
     public static void main(String[] args) {
 
-        System.out.println(isStringsIdentical("aa", "aa"));
+//        System.out.println(isStringsIdentical("aa", "aa"));
 //        System.out.println(isStringsIdentical2("Prada", "dRaap"));
 //
-//        String str = "mama mila milu";
-//
-//        System.out.println(reverseString(str));
+        String str = "mama mila milu";
+
+        System.out.println(reverseString2(str));
 //        System.out.println(isPolindrom("opal"));
     }
 
@@ -24,15 +24,19 @@ public class StringsTasks {
         return builder.toString();
     }
 
+    public static String reverseString2(String str) {
+        String result = "";
+        for (int i = str.length() - 1; i >= 0; i--) {
+            result = result + str.charAt(i);
+        }
+        return result;
+    }
+
     public static boolean isPolindrom(String str) {
         System.out.println("Original String: " + str);
 
         String s = reverseString(str);
-        if (str == s) {
-            return true;
-        } else {
-            return false;
-        }
+        return str == s;
     }
 
     public static boolean isStringsIdentical(String s, String r) {
@@ -64,7 +68,9 @@ public class StringsTasks {
     }
 
     public static boolean isStringsIdentical2(String s, String r) {
-        if(s.length()!=r.length()) return false;
+        if (s.length() != r.length()) {
+            return false;
+        }
         s = s.toLowerCase();
         r = r.toLowerCase();
 
@@ -72,7 +78,7 @@ public class StringsTasks {
         char[] charArray2 = r.toCharArray();
         Arrays.sort(charArray1);
         Arrays.sort(charArray2);
-        return Arrays.equals(charArray1,charArray2);
+        return Arrays.equals(charArray1, charArray2);
 
     }
 

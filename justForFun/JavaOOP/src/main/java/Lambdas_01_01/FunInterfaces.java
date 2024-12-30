@@ -1,7 +1,5 @@
 package Lambdas_01_01;
 
-import io.cucumber.java.sl.In;
-
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
@@ -43,7 +41,7 @@ public class FunInterfaces {
 
         //Predicate
         Predicate<String> strLength = (s) -> s.length() < 10;
-        System.out.println(strLength.test("Veronika;") + "- Veronika is less than 10");
+        System.out.println(strLength.test("Veronika;") + "- Veronika lenght is less than 10");
 
         Consumer<String> consumerStr1 = (s) -> {
             System.out.println(s.toUpperCase());
@@ -71,8 +69,9 @@ public class FunInterfaces {
         String s = supplier.get();
         System.out.println(s);
 
-        Function<Integer, String> fun = i -> i.toString();
+        Function<Integer,String> fun = i -> i.toString();
         String apply = fun.apply(5);
+        System.out.println("Function result: " + apply);
 
     }
 

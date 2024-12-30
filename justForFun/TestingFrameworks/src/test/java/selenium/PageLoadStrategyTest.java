@@ -1,5 +1,6 @@
 package selenium;
 
+import com.codeborne.selenide.WebDriverRunner;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.PageLoadStrategy;
@@ -17,11 +18,13 @@ import java.time.Duration;
  */
 public class PageLoadStrategyTest {
     public static void main(String[] args) {
-        //System.setProperty("webdriver.chrome.driver", ".\\src\\main\\resources\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver",
+                "TestingFrameworks/src/test/resources/chromedriver.exe");
         ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--remote-allow-origins=*");
         chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
-        WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver(chromeOptions);
+        WebDriverRunner.setWebDriver(driver);
         try {
             // Navigate to Url
             driver.get("https://google.com");
